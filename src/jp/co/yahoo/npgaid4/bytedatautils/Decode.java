@@ -3,7 +3,7 @@ package jp.co.yahoo.npgaid4.bytedatautils;
 import java.nio.ByteBuffer;
 
 public class Decode {
-    public APDUCommandBuilder(byte[] apduHeader, byte[] apduData,int Le){
+    public byte[] APDUCommandBuilder(byte[] apduHeader, byte[] apduData,int Le){
         byte[] apduCommand;
         int Lc;
         if(Le > 65536){
@@ -84,9 +84,6 @@ public class Decode {
                 }
             }
         }
-
-
-
-
+        return apduCommand;
     }
 }
